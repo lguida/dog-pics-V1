@@ -13,13 +13,16 @@ function getDogImage(number) {
     console.log(responseJson);
     //replace the existing image with the new one
     $('.results-img').replaceWith(
-      `<img src="${responseJson.message[0]}" class="results-img">`
-    )
-    //display the results section
-    $('.results').removeClass('hidden');
-    for (i = 1; i < number; i++){
-        console.log(responseJson.message[i])
+      `<img src="${responseJson.message[0]}" class="results-img">`)
+    
+    for (i = 0; i < number; i++){
+      console.log(responseJson.message[i])
     }
+    
+    //display the results section
+    //$('.results').removeClass('hidden');
+    //
+    //}
   }
   
   function watchForm() {
