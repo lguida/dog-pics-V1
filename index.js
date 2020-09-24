@@ -28,7 +28,8 @@ function getDogImage(number) {
   function watchForm() {
     $('form').submit(event => {
       event.preventDefault();
-      const numPhotosToFind = $(event.currentTarget).find('#photo-num').val(); 
+      let numPhotosToFind = 3;
+      numPhotosToFind = $(event.currentTarget).find('#photo-num').val(); 
       if (numPhotosToFind > 50){
           alert("Please select a number between 1 and 50")
       }
